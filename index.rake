@@ -9,7 +9,6 @@ namespace :weapp do
     )
 
     version = SemVer.find
-    version.patch += 1
 
     # datetime = Time.now.strftime("%Y-%m-%d %H:%M:%S")
     shorthash = `git rev-parse --short HEAD`.gsub("\n", "")
