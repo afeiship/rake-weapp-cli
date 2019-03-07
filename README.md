@@ -9,5 +9,5 @@ npm i -S afeiship/rake-weapp-cli --registry=https://registry.npm.taobao.org
 ## usage:
 ~~~
 $ rake -T
-rake weapp:publish[cli,root,desc]  # Cli publish to preview version
+rake weapp:publish[desc,cli,root]  # Cli publish to preview version
 ~~~
