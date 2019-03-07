@@ -5,10 +5,11 @@ namespace :weapp do
     args.with_defaults(
       :cli => "/Applications/wechatwebdevtools.app/Contents/MacOS/cli",
       :root => Dir.pwd,
+      :desc => "BY_ROBOT",
     )
 
-    datetime = Time.now.strftime("%Y-%m-%d %H:%M:%S")
-    shorthash = `git rev-parse --short HEAD`
-    sh "#{args[:cli]} -u ROBOT@#{args[:root]} --upload-desc #{shorthash}"
+    # datetime = Time.now.strftime("%Y-%m-%d %H:%M:%S")
+    shorthash = `git rev-parse --short HEAD`.gsub("\n", "")
+    sh "#{args[:cli]} -u ROBOT_#{shorthash}@#{args[:root]} --upload-desc #{args[:desc]}"
   end
 end
