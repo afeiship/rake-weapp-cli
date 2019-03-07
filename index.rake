@@ -11,7 +11,7 @@ namespace :weapp do
     version = SemVer.find
 
     # datetime = Time.now.strftime("%Y-%m-%d %H:%M:%S")
-    shorthash = `git rev-parse --short HEAD`.strip
+    shorthash = `git rev-parse --short HEAD`.rstrip
     sh "#{args[:cli]} -u #{version.to_s}@#{args[:root]} --upload-desc #{args[:desc]}_#{shorthash}"
   end
 end
