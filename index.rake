@@ -7,7 +7,8 @@ namespace :weapp do
       :root => Dir.pwd,
     )
 
-    puts args
-    # puts "hello world, #{args[:name]} from #{args[:from]}!"
+    datetime = Time.now.strftime("%Y-%m-%d %H:%M:%S")
+    shorthash = `git rev-parse --short HEAD`
+    sh "#{args[:cli]} -u ROBOT@#{args[:root]} --upload-desc #{shorthash}"
   end
 end
