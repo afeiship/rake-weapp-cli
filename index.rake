@@ -1,3 +1,6 @@
+require "json"
+pkg = JSON.load File.open "./package.json"
+
 namespace :weapp do
   # rake hello_with_args[afei,bash]
   desc "Cli publish to preview version"
@@ -8,7 +11,7 @@ namespace :weapp do
       :root => Dir.pwd,
     )
 
-    version = SemVer.find
+    version = pkg["version"]
 
     # datetime = Time.now.strftime("%Y-%m-%d %H:%M:%S")
     shorthash = `git rev-parse --short HEAD`.rstrip
