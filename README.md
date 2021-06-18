@@ -1,12 +1,12 @@
 # rake-weapp-cli
 > Rake for weapp cli.
 
-## install:
+## installation
 ```bash
-npm i -S afeiship/rake-weapp-cli --registry=https://registry.npm.taobao.org
+npm i -S @jswork/rake-weapp-cli
 ```
 
-## usage:
+## usage
 ~~~
 $ rake -T
 rake weapp:publish[desc,cli,root]  # Cli publish to preview version

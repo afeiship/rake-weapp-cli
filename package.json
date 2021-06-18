@@ -1,5 +1,5 @@
 {
-  "name": "rake-weapp-cli",
+  "name": "@jswork/rake-weapp-cli",
   "version": "1.0.0",
   "description": "Rake for weapp cli.",
   "main": "index.rake",
