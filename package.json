@@ -7,11 +7,20 @@
     "type": "git",
     "url": "git+https://github.com/afeiship/rake-weapp-cli.git"
   },
-  "keywords": ["rake", "task"],
+  "keywords": [
+    "rake",
+    "task"
+  ],
   "author": "afei",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/afeiship/rake-weapp-cli/issues"
   },
-  "homepage": "https://github.com/afeiship/rake-weapp-cli#readme"
+  "homepage": "https://github.com/afeiship/rake-weapp-cli#readme",
+  "scripts": {
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "release-it": "^14.9.0"
+  }
 }
